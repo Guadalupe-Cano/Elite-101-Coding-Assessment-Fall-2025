@@ -1,14 +1,10 @@
-
-Guadalupe Cano
-1:29 AM (17 hours ago)
-to me
-
 from library_books import library_books
 from datetime import datetime, timedelta
 
 # -------- Level 1 --------
 # TODO: Create a function to view all books that are currently available
 # Output should include book ID, title, and author
+
 
 def acess_avaliable_books():
     #for loop will look through each dictionary to see if condition is met
@@ -97,5 +93,38 @@ def overdueBook():
         if book["due_date"] is not None:
             if book["due_date"] < today:
                 print(f"Title: book['title'] ")
-             
-overdueBook()
+
+
+
+def main():
+    print("Welcome please choose one of the four options: ")
+    print("1. Access avaliable book")
+    print("2. Search by genre or author")
+    print("3. check out book")
+    print("4. return a book") 
+    print("5. overdue Books") 
+    chooseNum = int(input("Choose a number: "))
+    if chooseNum == 1:
+        acess_avaliable_books()
+    elif chooseNum == 2:
+        search_Genre_or_Author()
+    elif chooseNum == 3:
+        checkOutBook()
+    elif chooseNum == 4:
+        returnBook()
+    elif chooseNum == 5:
+        overdueBook()
+    else:
+        print("Invalid") 
+
+main()
+        
+        
+        
+    
+        
+        
+
+
+
+
